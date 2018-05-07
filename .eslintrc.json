@@ -1,24 +1,28 @@
 {
-  "extends": [
-    "airbnb"
+  "extends": "airbnb",
+  "plugins": [
+    "standard"
   ],
   "parserOptions": {
     "ecmaVersion": 6,
-    "sourceType": "module",
-    "ecmaFeatures": {
-      "jsx": true
-    }
+    "sourceType": "module"
   },
-  "env": {
-    "es6": true,
-    "node": true,
-    "browser": true
-  },
-  "plugins": [
-    "react"
-  ],
   "rules": {
-    "comma-dangle": 0,
-    "prefer-destructuring": 0
+    "semi": 2,
+    "import/no-extraneous-dependencies": [
+      "error", {
+        "devDependencies": true
+      }]
+  },
+  "globals": {
+    "describe": true,
+    "it": true,
+    "expect": true,
+    "app": true,
+    "td": true,
+    "beforeEach": true,
+    "request": true,
+    "Joi": true,
+    "joiAssert": true
   }
 }
