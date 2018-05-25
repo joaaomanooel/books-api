@@ -28,7 +28,7 @@ describe('Routes Books', () => {
   });
 
   describe('Route GET /books/{id}', () => {
-    it('should return a list of books', (done) => {
+    it('should return a books', (done) => {
       request
         .get('/books/1')
         .end((err, res) => {
