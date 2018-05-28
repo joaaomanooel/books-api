@@ -2,7 +2,7 @@ import BooksController from '../controllers/books';
 
 const booksRouter = (app) => {
   const { Books } = app.datasource.models;
-  const booksController = new BooksController(Books)
+  const booksController = new BooksController(Books);
   app.route('/books')
     .get((req, res) => {
       booksController.getAll()
@@ -36,10 +36,7 @@ const booksRouter = (app) => {
     })
     .delete((req, res) => {
       booksController.delete(req.params)
-        .then((response) => {
-          res.status(response.statusCode);
-          res.json(response.data);
-        });
+        .then(response => res.sendStatus(response.statusCode));
     });
 };
 

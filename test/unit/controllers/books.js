@@ -10,8 +10,8 @@ describe('Controllers: Books', () => {
       const expectedResponse = [{
         id: 1,
         name: 'test book',
-        created_at: '2016-08-06T23:55:36.692Z',
-        updated_at: '2016-08-06T23:55:36.692Z',
+        createdAt: '2016-08-06T23:55:36.692Z',
+        updatedAt: '2016-08-06T23:55:36.692Z',
       }];
 
       td.when(Books.findAll({})).thenResolve(expectedResponse);
@@ -31,8 +31,8 @@ describe('Controllers: Books', () => {
       const expectedResponse = {
         id: 1,
         name: 'test book',
-        created_at: '2016-08-06T23:55:36.692Z',
-        updated_at: '2016-08-06T23:55:36.692Z',
+        createdAt: '2016-08-06T23:55:36.692Z',
+        updatedAt: '2016-08-06T23:55:36.692Z',
       };
 
       td.when(Books.findOne({ where: { id: 1 } })).thenResolve(expectedResponse);
@@ -56,8 +56,8 @@ describe('Controllers: Books', () => {
       const expectedResponse = {
         id: 1,
         name: 'test book',
-        created_at: '2016-08-06T23:55:36.692Z',
-        updated_at: '2016-08-06T23:55:36.692Z',
+        createdAt: '2016-08-06T23:55:36.692Z',
+        updatedAt: '2016-08-06T23:55:36.692Z',
       };
 
       td.when(Books.create(requestBody)).thenResolve(expectedResponse);
@@ -85,8 +85,8 @@ describe('Controllers: Books', () => {
       const expectedResponse = {
         id: 1,
         name: 'test book updated',
-        created_at: '2016-08-06T23:55:36.692Z',
-        updated_at: '2016-08-06T23:55:36.692Z',
+        createdAt: '2016-08-06T23:55:36.692Z',
+        updatedAt: '2016-08-06T23:55:36.692Z',
       };
 
       td.when(Books.update(requestBody, { where: { id: 1 } })).thenResolve(expectedResponse);

@@ -5,9 +5,10 @@
   "main": "index.js",
   "scripts": {
     "start": "babel-node index.js",
-    "test": "npm run test:integration && npm run test:unit",
-    "test:integration": "mocha --opts test/integration/mocha.opts test/integration/*.js",
-    "test:unit": "mocha --opts test/unit/mocha.opts test/unit/**/*.js",
+    "test": "npm run test:integration && npm run test:unit && npm run test:contracts",
+    "test:integration": "NODE_ENV=test mocha --opts test/integration/mocha.opts test/integration/*.js",
+    "test:unit": "NODE_ENV=test mocha --opts test/unit/mocha.opts test/unit/**/*.js",
+    "test:contracts": "NODE_ENV=test mocha --opts test/contracts/mocha.opts test/contracts/**/*.js",
     "lint": "eslint **/*.js",
     "lint:fix": "eslint **/*.js --fix"
   },
@@ -32,6 +33,8 @@
     "eslint-plugin-jsx-a11y": "^6.0.3",
     "eslint-plugin-react": "^7.8.2",
     "eslint-plugin-standard": "^3.1.0",
+    "joi": "^13.3.0",
+    "joi-assert": "0.0.3",
     "mocha": "^5.1.1",
     "supertest": "^3.0.0",
     "testdouble": "^3.8.1"
