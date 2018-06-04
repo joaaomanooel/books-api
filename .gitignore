@@ -63,6 +63,6 @@ typings/
 # Others
 *.sqlite
 
-package-look.json
+package-lock.json
 
 .node_repl_history
