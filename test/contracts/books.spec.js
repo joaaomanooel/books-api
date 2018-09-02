@@ -1,3 +1,6 @@
+import Joi from 'joi';
+import joiAssert from 'joi-assert';
+
 describe('Routes Books', () => {
   const { Books } = app.datasource.models;
   const defaultBook = {
