@@ -6,11 +6,24 @@
   "scripts": {
     "start": "babel-node index.js",
     "test": "npm run test:integration && npm run test:unit && npm run test:contracts",
+    "test:converage": "NODE_ENV=test nyc npm test",
     "test:integration": "NODE_ENV=test mocha --opts test/integration/mocha.opts test/integration/**/*.spec.js",
     "test:unit": "NODE_ENV=test mocha --opts test/unit/mocha.opts test/unit/**/*.spec.js",
     "test:contracts": "NODE_ENV=test mocha --opts test/contracts/mocha.opts test/contracts/**/*.spec.js",
     "lint": "eslint **/*.js",
     "lint:fix": "eslint **/*.js --fix"
+  },
+  "nyc": {
+    "functions": 75,
+    "lines": 75,
+    "check-converage": true,
+    "reporter": [
+      "text",
+      "html"
+    ],
+    "exclude": [
+      "tests/**"
+    ]
   },
   "repository": {
     "type": "git",
@@ -36,6 +49,7 @@
     "joi": "^13.3.0",
     "joi-assert": "0.0.3",
     "mocha": "^5.1.1",
+    "nyc": "^13.0.1",
     "supertest": "^3.0.0",
     "testdouble": "^3.8.1"
   },
