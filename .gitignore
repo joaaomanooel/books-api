@@ -63,6 +63,4 @@ typings/
 # Others
 *.sqlite
 
-package-lock.json
-
 .node_repl_history
