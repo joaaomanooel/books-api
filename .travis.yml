@@ -3,4 +3,4 @@ node_js:
  - "10.10.0"
 script:
   - npm run converage
-after_script: "cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js"
+after_script: "cat ./coverage/lcov.info | coveralls"
