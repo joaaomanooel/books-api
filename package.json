@@ -6,10 +6,10 @@
   "scripts": {
     "start": "babel-node index.js",
     "test": "npm run test:integration && npm run test:unit && npm run test:contracts",
-    "test:converage": "NODE_ENV=test nyc npm test",
-    "test:integration": "NODE_ENV=test mocha --opts test/integration/mocha.opts test/integration/**/*.spec.js",
-    "test:unit": "NODE_ENV=test mocha --opts test/unit/mocha.opts test/unit/**/*.spec.js",
-    "test:contracts": "NODE_ENV=test mocha --opts test/contracts/mocha.opts test/contracts/**/*.spec.js",
+    "test:converage": "SET NODE_ENV=test && nyc npm test",
+    "test:integration": "SET NODE_ENV=test && mocha --opts test/integration/mocha.opts test/integration/**/*.spec.js",
+    "test:unit": "SET NODE_ENV=test && mocha --opts test/unit/mocha.opts test/unit/**/*.spec.js",
+    "test:contracts": "SET NODE_ENV=test && mocha --opts test/contracts/mocha.opts test/contracts/**/*.spec.js",
     "lint": "eslint **/*.js",
     "lint:fix": "eslint **/*.js --fix"
   },
@@ -55,11 +55,11 @@
     "testdouble": "^3.8.1"
   },
   "dependencies": {
-    "bcrypt": "^2.0.1",
+    "bcrypt": "^3.0.0",
     "body-parser": "^1.18.3",
     "express": "^4.16.3",
     "http-status": "^1.2.0",
     "sequelize": "^4.37.8",
-    "sqlite3": "^4.0.0"
+    "sqlite3": "^4.0.2"
   }
 }
