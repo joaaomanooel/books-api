@@ -6,10 +6,10 @@
   "scripts": {
     "start": "babel-node index.js",
     "test": "npm run test:integration && npm run test:unit && npm run test:contracts",
-    "test:converage": "SET NODE_ENV=test && nyc npm test",
-    "test:integration": "SET NODE_ENV=test && mocha --opts test/integration/mocha.opts test/integration/**/*.spec.js",
-    "test:unit": "SET NODE_ENV=test && mocha --opts test/unit/mocha.opts test/unit/**/*.spec.js",
-    "test:contracts": "SET NODE_ENV=test && mocha --opts test/contracts/mocha.opts test/contracts/**/*.spec.js",
+    "test:converage": "nyc npm test && nyc report --reporter=text-lcov | coveralls",
+    "test:integration": "mocha --opts test/integration/mocha.opts test/integration/**/*.spec.js",
+    "test:unit": "mocha --opts test/unit/mocha.opts test/unit/**/*.spec.js",
+    "test:contracts": "mocha --opts test/contracts/mocha.opts test/contracts/**/*.spec.js",
     "lint": "eslint **/*.js",
     "lint:fix": "eslint **/*.js --fix"
   },
@@ -18,8 +18,7 @@
     "lines": 75,
     "check-converage": true,
     "reporter": [
-      "text",
-      "html"
+      "lcov"
     ],
     "exclude": [
       "tests/**"
