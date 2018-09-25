@@ -10,8 +10,8 @@
     "test:integration": "mocha --opts test/integration/mocha.opts test/integration/**/*.spec.js",
     "test:unit": "mocha --opts test/unit/mocha.opts test/unit/**/*.spec.js",
     "test:contracts": "mocha --opts test/contracts/mocha.opts test/contracts/**/*.spec.js",
-    "lint": "eslint **/*.js",
-    "lint:fix": "eslint **/*.js --fix"
+    "lint": "eslint ./*js controllers/*.js models/*.js config/*.js test/*.js",
+    "lint:fix": "npm run lint -- --fix"
   },
   "nyc": {
     "functions": 75,
@@ -58,6 +58,9 @@
     "body-parser": "^1.18.3",
     "express": "^4.16.3",
     "http-status": "^1.2.0",
+    "jwt-simple": "^0.5.3",
+    "passport": "^0.4.0",
+    "passport-jwt": "^4.0.0",
     "sequelize": "^4.37.8",
     "sqlite3": "^4.0.2"
   }
