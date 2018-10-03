@@ -6,4 +6,5 @@ script:
 cache:
   directories:
     "node_modules"
+    ".travis.yml"
 after_script: "cat ./coverage/lcov.info | coveralls"
