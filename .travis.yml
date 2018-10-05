@@ -2,13 +2,8 @@ language: node_js
 node_js:
  - "10.10.0"
 script:
-<<<<<<< HEAD
   - npm run coveralls
-=======
-  - NODE_ENV=test npm run test:converage
 cache:
   directories:
     "node_modules"
-    "test_books.sqlite"
->>>>>>> c94e2fd71585741c440ba3dadcd32f1a2df17f40
 after_script: "cat ./coverage/lcov.info | coveralls"
