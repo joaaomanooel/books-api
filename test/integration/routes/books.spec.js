@@ -13,6 +13,8 @@ describe('Routes Books', () => {
 
   let token;
 
+  before(async () => await Books.find());
+
   beforeEach((done) => {
     Users
       .destroy({ where: {} })

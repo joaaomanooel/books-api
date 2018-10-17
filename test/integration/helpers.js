@@ -1,6 +1,6 @@
 import supertest from 'supertest';
 import chai from 'chai';
-import app from '../../app';
+import app from '../../src/app';
 
 global.app = app;
 global.request = supertest(app);

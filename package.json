@@ -11,7 +11,7 @@
     "test:integration": "NODE_ENV=test mocha --opts test/integration/mocha.opts test/integration/**/*.spec.js",
     "test:unit": "NODE_ENV=test mocha --opts test/unit/mocha.opts test/unit/**/*.spec.js",
     "test:contracts": "NODE_ENV=test mocha --opts test/contracts/mocha.opts test/contracts/**/*.spec.js",
-    "lint": "eslint ./*js controllers/*.js models/*.js config/*.js test/*.js",
+    "lint": "eslint src/*.js config/*.js test/*.js",
     "lint:fix": "npm run lint -- --fix",
     "prepush": "npm run test:converage"
   },
