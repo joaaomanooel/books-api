@@ -1,5 +1,5 @@
 # Books API
-![Build Status](https://travis-ci.org/joaaomanooel/books-api.svg?branch=master) [![Coverage Status](https://coveralls.io/repos/github/joaaomanooel/books-api/badge.svg)](https://coveralls.io/github/joaaomanooel/books-api) [![Known Vulnerabilities](https://snyk.io/test/github//joaaomanooel/books-api/badge.svg)](https://snyk.io/test/github//joaaomanooel/books-api)
+[![Build Status](https://travis-ci.org/joaaomanooel/books-api.svg?branch=master)](https://travis-ci.org/joaaomanooel/books-api) [![Coverage Status](https://coveralls.io/repos/github/joaaomanooel/books-api/badge.svg)](https://coveralls.io/github/joaaomanooel/books-api) [![Known Vulnerabilities](https://snyk.io/test/github//joaaomanooel/books-api/badge.svg)](https://snyk.io/test/github//joaaomanooel/books-api)
 
 ## Contributing
 
