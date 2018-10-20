@@ -14,6 +14,9 @@ describe('Routes Books', () => {
   };
 
   let token;
+
+  before(() => Books.find());
+
   beforeEach((done) => {
     Users
       .destroy({ where: {} })

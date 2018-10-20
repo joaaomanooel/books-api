@@ -7,6 +7,8 @@ describe('Routes Users', () => {
     password: 'test',
   };
 
+  before(() => Users.find());
+
   beforeEach((done) => {
     Users
       .destroy({ where: {} })

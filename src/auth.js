@@ -8,7 +8,7 @@ export default (app) => {
   opts.jwtFromRequest = ExtractJwt.fromAuthHeaderAsBearerToken();
 
   const strategy = new Strategy(opts, (payload, done) => {
-    Users.findById(payload.id)
+    Users.findByPk(payload.id)
       .then((user) => {
         if (user) {
           return done(null, {
