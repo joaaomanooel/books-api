@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "babel-node index.js",
+    "start": "NODE_ENV=dev babel-node index.js",
     "test": "npm run test:integration && npm run test:unit && npm run test:contracts",
     "test:converage": "nyc npm test",
     "coveralls": "npm run test:converage && nyc report --reporter=text-lcov | coveralls",
