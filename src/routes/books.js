@@ -1,4 +1,4 @@
-import BooksController from '../controllers/books';
+const BooksController = require('../controllers/books');
 
 const booksRouter = (app) => {
   const { Books } = app.datasource.models;
@@ -42,4 +42,4 @@ const booksRouter = (app) => {
     });
 };
 
-export default booksRouter;
+module.exports = booksRouter;

@@ -1,4 +1,4 @@
-import UsersController from '../controllers/users';
+const UsersController = require('../controllers/users');
 
 const usersRouter = (app) => {
   const { Users } = app.datasource.models;
@@ -40,4 +40,4 @@ const usersRouter = (app) => {
     });
 };
 
-export default usersRouter;
+module.exports = usersRouter;

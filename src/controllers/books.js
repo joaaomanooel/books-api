@@ -1,4 +1,4 @@
-import httpStatus from 'http-status';
+const httpStatus = require('http-status');
 
 const defaultResponse = (data, statusCode = httpStatus.OK) => ({
   data,
@@ -45,4 +45,4 @@ class BooksController {
   }
 }
 
-export default BooksController;
+module.exports = BooksController;
