@@ -1,6 +1,6 @@
-import supertest from 'supertest';
-import chai from 'chai';
-import app from '../../src/app';
+const supertest = require('supertest');
+const chai = require('chai');
+const app = require('../../src/app');
 
 global.app = app;
 global.request = supertest(app);

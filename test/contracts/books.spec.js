@@ -1,6 +1,6 @@
-import Joi from 'joi';
-import joiAssert from 'joi-assert';
-import jwt from 'jwt-simple';
+const Joi = require('joi');
+const joiAssert = require('joi-assert');
+const jwt = require('jwt-simple');
 
 describe('Routes Books', () => {
   const { Books } = app.datasource.models;

@@ -1,6 +1,6 @@
-import fs from 'fs';
-import path from 'path';
-import Sequelize from 'sequelize';
+const fs = require('fs');
+const path = require('path');
+const Sequelize = require('sequelize');
 
 let database = null;
 
@@ -15,7 +15,7 @@ const loadModels = (sequelize) => {
   return models;
 };
 
-export default (app) => {
+module.exports = (app) => {
   if (!database) {
     const { config } = app;
     const sequelize =

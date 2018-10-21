@@ -1,7 +1,7 @@
-import HttpStatus from 'http-status';
-import jwt from 'jwt-simple';
+const HttpStatus = require('http-status');
+const jwt = require('jwt-simple');
 
-export default (app) => {
+module.exports = (app) => {
   const { config } = app;
   const { Users } = app.datasource.models;
 
