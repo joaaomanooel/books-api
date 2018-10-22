@@ -18,7 +18,7 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 app.config = config;
 app.datasource = datasource(app);
-app.set('port', 7000);
+app.set('port', 80);
 
 const auth = authorization(app);
 app.use(auth.initialize());
