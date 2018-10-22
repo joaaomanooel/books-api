@@ -29,9 +29,12 @@ module.exports = (sequelize, DataType) => {
           notEmpty: true,
         },
       },
-    },
-    {
+    }, {
       hooks: {
+        beforeUpdate: (user) => {
+          const salt = bcrypt.genSaltSync();
+          user.set('password', bcrypt.hashSync(user.password, salt));
+        },
         beforeCreate: (user) => {
           const salt = bcrypt.genSaltSync();
           user.set('password', bcrypt.hashSync(user.password, salt));
@@ -40,7 +43,7 @@ module.exports = (sequelize, DataType) => {
       classMethods: {
         isPassword: (encodedPassword, password) => bcrypt.compareSync(password, encodedPassword),
       },
-    },
-  );
+    });
+
   return Users;
 };
