@@ -23,9 +23,9 @@ app.set('port', 7000);
 const auth = authorization(app);
 app.use(auth.initialize());
 app.auth = auth;
-app.use('/', (req, res) => res.send({ message: 'Bem vindo a Books API!' }));
 booksRouter(app);
 usersRouter(app);
 authRouter(app);
+app.use('/', (req, res) => res.send({ message: 'Bem vindo a Books API!' }));
 
 module.exports = app;
