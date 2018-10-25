@@ -15,7 +15,7 @@ We use [SemVer](http://semver.org/) for versioning. For the versions available, 
 |:---------------------:|
 |  [João Manoel Neto](https://github.com/joaaomanooel/)   |
 
-See also the list of [contributors](https://github.com/joaaomanooel/spotify-wrapper/contributors) who participated in this project.
+See also the list of [contributors](https://github.com/joaaomanooel/books-api/contributors) who participated in this project.
 
 ## License
 
