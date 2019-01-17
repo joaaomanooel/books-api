@@ -1,3 +1,4 @@
+/* eslint-disable comma-dangle */
 const fs = require('fs');
 const path = require('path');
 const Sequelize = require('sequelize');
@@ -5,7 +6,7 @@ const Sequelize = require('sequelize');
 let database = null;
 
 const loadModels = (sequelize) => {
-  const dir = path.join(__dirname, '../src/models');
+  const dir = path.join(__dirname, '../app/models');
   const models = [];
   fs.readdirSync(dir).forEach((file) => {
     const modelDir = path.join(dir, file);
@@ -18,8 +19,12 @@ const loadModels = (sequelize) => {
 module.exports = (app) => {
   if (!database) {
     const { config } = app;
-    const sequelize =
-      new Sequelize(config.database, config.username, config.password, config.params);
+    const sequelize = new Sequelize(
+      config.database,
+      config.username,
+      config.password,
+      config.params
+    );
 
     database = {
       sequelize,

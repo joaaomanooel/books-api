@@ -3,11 +3,11 @@ const bodyParser = require('body-parser');
 const cors = require('cors');
 const helmet = require('helmet');
 const morgan = require('morgan');
-const config = require('../config/config');
-const datasource = require('../config/datasource');
-const booksRouter = require('./routes/books');
-const usersRouter = require('./routes/users');
-const authRouter = require('./routes/auth');
+const config = require('./config/config');
+const datasource = require('./config/datasource');
+const booksRouter = require('./app/routes/books');
+const usersRouter = require('./app/routes/users');
+const authRouter = require('./app/routes/auth');
 const authorization = require('./auth');
 
 const app = express();
