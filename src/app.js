@@ -8,7 +8,6 @@ const datasource = require('./config/datasource');
 const booksRouter = require('./app/routes/books');
 const usersRouter = require('./app/routes/users');
 const authRouter = require('./app/routes/auth');
-const authorization = require('./auth');
 
 const app = express();
 app.use(cors());
@@ -20,9 +19,6 @@ app.config = config;
 app.datasource = datasource(app);
 app.set('port', process.env.PORT || 5000);
 
-const auth = authorization(app);
-app.use(auth.initialize());
-app.auth = auth;
 booksRouter(app);
 usersRouter(app);
 authRouter(app);
