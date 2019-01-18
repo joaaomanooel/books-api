@@ -1,6 +1,6 @@
 const Joi = require('joi');
 const joiAssert = require('joi-assert');
-const jwt = require('jwt-simple');
+const { generateToken } = require('../../src/app/controllers/auth');
 
 describe('Routes Books', () => {
   const { Books } = app.datasource.models;
@@ -30,7 +30,7 @@ describe('Routes Books', () => {
           .destroy({ where: {} })
           .then(() => Books.create(defaultBook))
           .then(() => {
-            token = jwt.encode({ id: user.id }, jwtSecret);
+            token = generateToken({ id: user.id }, jwtSecret);
             done();
           });
       });

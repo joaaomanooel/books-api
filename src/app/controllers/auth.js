@@ -3,7 +3,7 @@ const jwt = require('jsonwebtoken');
 const HttpStatus = require('http-status');
 const authConfig = require('../../config/config');
 
-function generateToken(params = {}) {
+const generateToken = (params = {}) => {
   return jwt.sign(
     { params },
     authConfig.jwtSecret,
@@ -11,10 +11,10 @@ function generateToken(params = {}) {
   );
 }
 
-module.exports = async (req, res, app) => {
+const authenticate = async (req, res, app) => {
   const { Users } = app.datasource.models;
   const { email, password } = req.body;
-  if(!email || !password) return res.status(HttpStatus.BAD_REQUEST).send({ error: 'User not found.' });
+  if (!email || !password) return res.status(HttpStatus.BAD_REQUEST).send({ error: 'User not found.' });
   const user = await Users.findOne({ where: { email } });
   if (!user) return res.status(HttpStatus.BAD_REQUEST).send({ error: 'User not found.' });
   if (!await bcrypt.compare(password, user.password)) {
@@ -28,3 +28,8 @@ module.exports = async (req, res, app) => {
     token: generateToken({ id: user._id }),
   });
 };
+
+module.exports = {
+  authenticate,
+  generateToken
+}
