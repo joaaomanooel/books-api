@@ -61,9 +61,10 @@ describe('Routes Users', () => {
         .post('/users')
         .send(newUser)
         .end((err, res) => {
-          expect(res.body.id).to.be.eql(newUser.id);
-          expect(res.body.name).to.be.eql(newUser.name);
-          expect(res.body.email).to.be.eql(newUser.email);
+          const { user } = res.body;
+          expect(user.id).to.be.eql(newUser.id);
+          expect(user.name).to.be.eql(newUser.name);
+          expect(user.email).to.be.eql(newUser.email);
           // expect(res.body.password).to.be.eql(defaultUser.password);
 
           done(err);

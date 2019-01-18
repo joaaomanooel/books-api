@@ -30,7 +30,7 @@ class UsersController {
   create(data) {
     return this.Users.create(data)
       .then((result) => {
-        const token = generateToken({ id: result.id })
+        const token = generateToken({ id: result.id });
         return defaultResponse({ user: result, token }, httpStatus.CREATED)
       })
       .catch(error => errorResponse(error.message, httpStatus.UNPROCESSABLE_ENTITY));
