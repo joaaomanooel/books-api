@@ -1,4 +1,5 @@
 const httpStatus = require('http-status');
+const { generateToken } = require('./auth')
 
 const defaultResponse = (data, statusCode = httpStatus.OK) => ({
   data,
@@ -28,7 +29,10 @@ class UsersController {
 
   create(data) {
     return this.Users.create(data)
-      .then(result => defaultResponse(result, httpStatus.CREATED))
+      .then((result) => {
+        const token = generateToken({ id: result.id });
+        return defaultResponse({ user: result, token }, httpStatus.CREATED)
+      })
       .catch(error => errorResponse(error.message, httpStatus.UNPROCESSABLE_ENTITY));
   }
 
