@@ -13,7 +13,9 @@
     "test:unit": "NODE_ENV=test mocha --opts test/unit/mocha.opts test/unit/**/*.spec.js",
     "test:contracts": "NODE_ENV=test mocha --opts test/contracts/mocha.opts test/contracts/**/*.spec.js",
     "lint": "eslint src/*.js config/*.js test/*.js",
-    "lint:fix": "npm run lint -- --fix"
+    "lint:fix": "npm run lint -- --fix",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
   },
   "nyc": {
     "functions": 80,
@@ -68,6 +70,8 @@
     "morgan": "^1.9.1",
     "path": "^0.12.7",
     "sequelize": "^4.37.8",
-    "sqlite3": "^4.0.2"
-  }
+    "sqlite3": "^4.0.2",
+    "snyk": "^1.189.0"
+  },
+  "snyk": true
 }
