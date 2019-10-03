@@ -4,7 +4,7 @@
   "description": "API to books",
   "main": "index.js",
   "engines": {
-    "node": ">=8.9.0"
+    "node": ">=8.x <12.x"
   },
   "scripts": {
     "start": "node index.js",
