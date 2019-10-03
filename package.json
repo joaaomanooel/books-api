@@ -18,7 +18,8 @@
     "lint": "eslint src/*.js config/*.js test/*.js",
     "lint:fix": "npm run lint -- --fix",
     "snyk:protect": "snyk protect",
-    "prepublish": "npm run snyk:protect"
+    "prepublish": "npm run snyk-protect && npm run snyk:protect",
+    "snyk-protect": "snyk protect"
   },
   "nyc": {
     "functions": 80,
@@ -93,7 +94,7 @@
     "path": "^0.12.7",
     "sequelize": "^4.44.3",
     "sqlite3": "^4.0.2",
-    "snyk": "^1.189.0"
+    "snyk": "^1.230.4"
   },
   "snyk": true
 }

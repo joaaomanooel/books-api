@@ -6,3 +6,7 @@ patch:
   SNYK-JS-LODASH-450202:
     - sequelize > lodash:
         patched: '2019-07-03T21:51:37.075Z'
+    - snyk > snyk-nuget-plugin > dotnet-deps-parser > lodash:
+        patched: '2019-10-03T02:57:14.198Z'
+    - sequelize > lodash:
+        patched: '2019-10-03T02:57:14.198Z'
