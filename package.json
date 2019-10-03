@@ -1,8 +1,11 @@
 {
   "name": "books-api",
   "version": "0.1.1",
-  "description": "",
+  "description": "API to books",
   "main": "index.js",
+  "engines": {
+    "node": ">=8.9.0"
+  },
   "scripts": {
     "start": "node index.js",
     "dev": "NODE_ENV=dev nodemon index.js",
@@ -14,8 +17,8 @@
     "test:contracts": "NODE_ENV=test mocha --opts test/contracts/mocha.opts test/contracts/**/*.spec.js",
     "lint": "eslint src/*.js config/*.js test/*.js",
     "lint:fix": "npm run lint -- --fix",
-    "snyk-protect": "snyk protect",
-    "prepublish": "npm run snyk-protect"
+    "snyk:protect": "snyk protect",
+    "prepublish": "npm run snyk:protect"
   },
   "nyc": {
     "functions": 80,
@@ -34,11 +37,30 @@
     "type": "git",
     "url": "git+https://github.com/joaaomanooel/books-api.git"
   },
-  "author": "João Manoel Neto <joaaomanooel@gmail.com>",
-  "license": "MIT",
+  "author": {
+    "name": "João Manoel Neto",
+    "email": "joaaomanooel@gmail.com",
+    "url": "https://github.com/joaaomanooel"
+  },
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "https://www.opensource.org/licenses/mit-license.php"
+    }
+  ],
   "bugs": {
+    "email": "joaaomanooel@gmail.com",
     "url": "https://github.com/joaaomanooel/books-api/issues"
   },
+  "keywords": [
+    "node",
+    "books",
+    "sqlite",
+    "travis",
+    "express",
+    "sequelize",
+    "javascript"
+  ],
   "homepage": "https://github.com/joaaomanooel/books-api#readme",
   "devDependencies": {
     "chai": "^4.1.2",
