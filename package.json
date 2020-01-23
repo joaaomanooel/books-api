@@ -91,7 +91,7 @@
     "jsonwebtoken": "^8.4.0",
     "morgan": "^1.9.1",
     "path": "^0.12.7",
-    "sequelize": "^4.44.3",
+    "sequelize": "^5.1.0",
     "sqlite3": "^4.0.2",
     "snyk": "^1.189.0"
   },
