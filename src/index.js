@@ -15,6 +15,6 @@ app.config = require('./config/config');
 app.datasource = require('./config/datasource')(app);
 require('./app/routes/index')(app);
 
-app.use('/', (req, res) => res.send({ message: 'Bem vindo a Books API!' }));
+app.use('/', (_req, res) => res.send({ message: 'Bem vindo a Books API!' }));
 
 module.exports = app;
