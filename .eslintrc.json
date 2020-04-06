@@ -1,18 +1,15 @@
 {
-  "extends": "airbnb-base",
-  "plugins": [
-    "standard"
+  "env": {
+    "commonjs": true,
+    "es6": true,
+    "node": true
+  },
+  "extends": [
+    "airbnb-base"
   ],
   "parserOptions": {
-    "ecmaVersion": 6,
+    "ecmaVersion": 2018,
     "sourceType": "module"
-  },
-  "rules": {
-    "semi": 2,
-    "import/no-extraneous-dependencies": [
-      "error", {
-        "devDependencies": true
-      }]
   },
   "globals": {
     "describe": true,
@@ -24,6 +21,51 @@
     "before": true,
     "request": true,
     "Joi": true,
-    "joiAssert": true
+    "joiAssert": true,
+    "Atomics": "readonly",
+    "SharedArrayBuffer": "readonly"
+  },
+  "rules": {
+    "import/no-dynamic-require": 0,
+    "lines-between-class-members": 0,
+    "no-restricted-globals": [
+      "error",
+      "FunctionExpression",
+      "WithStatement",
+      "BinaryExpression[operator='in']"
+    ],
+    "radix": [
+      1,
+      "as-needed"
+    ],
+    "no-underscore-dangle": 0,
+    "object-curly-newline": [
+      "error",
+      {
+        "ObjectPattern": {
+          "multiline": true,
+          "minProperties": 7
+        }
+      }
+    ],
+    "arrow-parens": [
+      "error",
+      "as-needed",
+      {
+        "requireForBlockBody": true
+      }
+    ],
+    "no-unused-vars": [
+      "error",
+      {
+        "argsIgnorePattern": "^_"
+      }
+    ],
+    "max-len": [
+      "error",
+      {
+        "code": 100
+      }
+    ]
   }
 }
