@@ -1,11 +1,11 @@
-const BooksController = require('../../../src/app/controllers/books');
+const { expect } = require('chai');
+const td = require('testdouble');
+const BooksController = require('../../src/app/controllers/books');
 
 describe('Controllers: Books', () => {
   describe('Get all books: getAll()', () => {
     it('should return a list of books', () => {
-      const Books = {
-        findAll: td.function(),
-      };
+      const Books = { findAll: td.function() };
 
       const expectedResponse = [{
         id: 1,
@@ -24,9 +24,7 @@ describe('Controllers: Books', () => {
 
   describe('Get one book: getById()', () => {
     it('should return a book', () => {
-      const Books = {
-        findOne: td.function(),
-      };
+      const Books = { findOne: td.function() };
 
       const expectedResponse = {
         id: 1,
@@ -45,13 +43,9 @@ describe('Controllers: Books', () => {
 
   describe('Create a book: create()', () => {
     it('should create a book', () => {
-      const Books = {
-        create: td.function(),
-      };
+      const Books = { create: td.function() };
 
-      const requestBody = {
-        name: 'test book',
-      };
+      const requestBody = { name: 'test book' };
 
       const expectedResponse = {
         id: 1,
@@ -73,9 +67,7 @@ describe('Controllers: Books', () => {
 
   describe('Update a book: update()', () => {
     it('should update an existing book', () => {
-      const Books = {
-        update: td.function(),
-      };
+      const Books = { update: td.function() };
 
       const requestBody = {
         id: 1,
@@ -99,9 +91,7 @@ describe('Controllers: Books', () => {
 
   describe('Delete a book: delete()', () => {
     it('should delete an existing book', () => {
-      const Books = {
-        destroy: td.function(),
-      };
+      const Books = { destroy: td.function() };
 
       td.when(Books.destroy({ where: { id: 1 } })).thenResolve({});
 
