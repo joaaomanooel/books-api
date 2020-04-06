@@ -1,21 +1,22 @@
 const Joi = require('joi');
 const joiAssert = require('joi-assert');
+const { expect } = require('chai');
+const supertest = require('supertest');
+const app = require('../../src');
 const { generateToken } = require('../../src/app/controllers/auth');
+
+const request = supertest(app);
 
 describe('Routes Books', () => {
   const { Books } = app.datasource.models;
   const { Users } = app.datasource.models;
   const { jwtSecret } = app.config;
 
-  const defaultBook = {
-    id: 1,
-    name: 'Default Book',
-    description: 'Default Description',
-  };
+  const defaultBook = { id: 1, name: 'Default Book', description: 'Default Description' };
 
   let token;
 
-  before(() => Books.find());
+  before(() => Books.findAll());
 
   beforeEach((done) => {
     Users
