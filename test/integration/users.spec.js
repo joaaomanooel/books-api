@@ -1,3 +1,9 @@
+const supertest = require('supertest');
+const { expect } = require('chai');
+const app = require('../../src');
+
+const request = supertest(app);
+
 describe('Routes Users', () => {
   const { Users } = app.datasource.models;
   const defaultUser = {
@@ -7,7 +13,7 @@ describe('Routes Users', () => {
     password: 'test',
   };
 
-  before(() => Users.find());
+  before(() => Users.findAll());
 
   beforeEach((done) => {
     Users
