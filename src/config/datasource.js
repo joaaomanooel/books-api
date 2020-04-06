@@ -26,14 +26,8 @@ module.exports = (app) => {
       config.params
     );
 
-    database = {
-      sequelize,
-      Sequelize,
-      models: {},
-    };
-
+    database = { sequelize, Sequelize, models: {} };
     database.models = loadModels(sequelize);
-
     sequelize.sync().done(() => database);
   }
 
