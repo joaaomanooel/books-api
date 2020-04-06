@@ -1,14 +1,8 @@
-const httpStatus = require('http-status');
-const { generateToken } = require('./auth')
+const { OK, BAD_REQUEST, CREATED, UNPROCESSABLE_ENTITY, NO_CONTENT } = require('http-status');
+const { generateToken } = require('./auth');
 
-const defaultResponse = (data, statusCode = httpStatus.OK) => ({
-  data,
-  statusCode,
-});
-
-const errorResponse = (message, statusCode = httpStatus.BAD_REQUEST) => defaultResponse({
-  error: message,
-}, statusCode);
+const defaultResponse = (data, statusCode = OK) => ({ data, statusCode });
+const errorResponse = (error, statusCode = BAD_REQUEST) => defaultResponse({ error }, statusCode);
 
 class UsersController {
   constructor(Users) {
@@ -31,21 +25,22 @@ class UsersController {
     return this.Users.create(data)
       .then((result) => {
         const token = generateToken({ id: result.id });
-        return defaultResponse({ user: result, token }, httpStatus.CREATED)
+        result.password = undefined; // eslint-disable-line no-param-reassign
+        return defaultResponse({ user: result, token }, CREATED);
       })
-      .catch(error => errorResponse(error.message, httpStatus.UNPROCESSABLE_ENTITY));
+      .catch(error => errorResponse(error.message, UNPROCESSABLE_ENTITY));
   }
 
   update(data, params) {
     return this.Users.update(data, { where: params })
       .then(result => defaultResponse(result))
-      .catch(error => errorResponse(error.message, httpStatus.UNPROCESSABLE_ENTITY));
+      .catch(error => errorResponse(error.message, UNPROCESSABLE_ENTITY));
   }
 
   delete(params) {
     return this.Users.destroy({ where: params })
-      .then(result => defaultResponse(result, httpStatus.NO_CONTENT))
-      .catch(error => errorResponse(error.message, httpStatus.UNPROCESSABLE_ENTITY));
+      .then(result => defaultResponse(result, NO_CONTENT))
+      .catch(error => errorResponse(error.message, UNPROCESSABLE_ENTITY));
   }
 }
 
