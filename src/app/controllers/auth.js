@@ -17,7 +17,10 @@ const authenticate = async (req, res, app) => {
 
   user.password = undefined;
 
-  return res.send({ user, token: generateToken({ id: user._id }) });
+  return res.send({
+    token: generateToken({ id: user._id, name: user.name, email: user.email }),
+    user,
+  });
 };
 
 module.exports = { authenticate, generateToken };
