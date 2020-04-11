@@ -15,8 +15,7 @@
     "lint": "eslint .",
     "lint:fix": "npm run lint -- --fix",
     "snyk:protect": "snyk protect",
-    "prepublish": "npm run snyk-protect && npm run snyk:protect",
-    "snyk-protect": "snyk protect"
+    "prepublish": "npm run snyk:protect"
   },
   "nyc": {
     "functions": 80,
