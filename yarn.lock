@@ -1081,11 +1081,6 @@ commondir@^1.0.1:
   resolved "https://registry.yarnpkg.com/commondir/-/commondir-1.0.1.tgz#ddd800da0c66127393cca5950ea968a3aaf1253b"
   integrity sha1-3dgA2gxmEnOTzKWVDqloo6rxJTs=
 
-compare-property@^2.0.0:
-  version "2.0.0"
-  resolved "https://registry.yarnpkg.com/compare-property/-/compare-property-2.0.0.tgz#e535ae960832a16ab01c5e6af2e96bc845134700"
-  integrity sha1-5TWulggyoWqwHF5q8ulryEUTRwA=
-
 compare-versions@^3.6.0:
   version "3.6.0"
   resolved "https://registry.yarnpkg.com/compare-versions/-/compare-versions-3.6.0.tgz#1a5689913685e5a87637b8d3ffca75514ec41d62"
@@ -1100,17 +1095,6 @@ concat-map@0.0.1:
   version "0.0.1"
   resolved "https://registry.yarnpkg.com/concat-map/-/concat-map-0.0.1.tgz#d8a96bd77fd68df7793a73036a3ba0d5405d477b"
   integrity sha1-2Klr13/Wjfd5OnMDajug1UBdR3s=
-
-configly@^4.1.0:
-  version "4.1.0"
-  resolved "https://registry.yarnpkg.com/configly/-/configly-4.1.0.tgz#48a6af73cddd1e4d98d44fe264b78db2b0880bce"
-  integrity sha1-SKavc83dHk2Y1E/iZLeNsrCIC84=
-  dependencies:
-    compare-property "^2.0.0"
-    deeply "^2.0.3"
-    fulcon "^1.0.2"
-    precise-typeof "^1.0.2"
-    stripbom "^3.0.0"
 
 configstore@^5.0.1:
   version "5.0.1"
@@ -1151,7 +1135,7 @@ content-security-policy-builder@2.1.0:
   resolved "https://registry.yarnpkg.com/content-security-policy-builder/-/content-security-policy-builder-2.1.0.tgz#0a2364d769a3d7014eec79ff7699804deb8cfcbb"
   integrity sha512-/MtLWhJVvJNkA9dVLAp6fg9LxD2gfI6R2Fi1hPmfjYXSahJJzcfvoeDOxSyp4NvxMuwWv3WMssE9o31DoULHrQ==
 
-content-type@~1.0.4:
+content-type@^1.0.4, content-type@~1.0.4:
   version "1.0.4"
   resolved "https://registry.yarnpkg.com/content-type/-/content-type-1.0.4.tgz#e138cc75e040c727b1966fe5e5f8c9aee256fe3b"
   integrity sha512-hIP3EEPs8tB9AT1L+NUqtwOAps4mk2Zob89MWXMHjHWg9milF/j4osnnQLXBCBFBk/tvIG/tUc9mOUJiPBhPXA==
@@ -1337,14 +1321,6 @@ deep-is@~0.1.3:
   version "0.1.3"
   resolved "https://registry.yarnpkg.com/deep-is/-/deep-is-0.1.3.tgz#b369d6fb5dbc13eecf524f91b070feedc357cf34"
   integrity sha1-s2nW+128E+7PUk+RsHD+7cNXzzQ=
-
-deeply@^2.0.3:
-  version "2.0.3"
-  resolved "https://registry.yarnpkg.com/deeply/-/deeply-2.0.3.tgz#613b1fe7380c00e36df896872f0efaecb1642342"
-  integrity sha1-YTsf5zgMAONt+JaHLw767LFkI0I=
-  dependencies:
-    fulcon "^1.0.1"
-    precise-typeof "^1.0.2"
 
 default-require-extensions@^3.0.0:
   version "3.0.0"
@@ -2071,11 +2047,6 @@ ftp@~0.3.10:
     readable-stream "1.1.x"
     xregexp "2.0.0"
 
-fulcon@^1.0.1, fulcon@^1.0.2:
-  version "1.0.2"
-  resolved "https://registry.yarnpkg.com/fulcon/-/fulcon-1.0.2.tgz#8a4dfda4c73fcd9cc62a79d5045c392b45547320"
-  integrity sha1-ik39pMc/zZzGKnnVBFw5K0VUcyA=
-
 function-bind@^1.1.1:
   version "1.1.1"
   resolved "https://registry.yarnpkg.com/function-bind/-/function-bind-1.1.1.tgz#a56899d3ea3c9bab874bb9773b7c5ede92f4895d"
@@ -2634,11 +2605,6 @@ is-bluebird@^1.0.2:
   version "1.0.2"
   resolved "https://registry.yarnpkg.com/is-bluebird/-/is-bluebird-1.0.2.tgz#096439060f4aa411abee19143a84d6a55346d6e2"
   integrity sha1-CWQ5Bg9KpBGr7hkUOoTWpVNG1uI=
-
-is-buffer@^1.1.1:
-  version "1.1.6"
-  resolved "https://registry.yarnpkg.com/is-buffer/-/is-buffer-1.1.6.tgz#efaa2ea9daa0d7ab2ea13a97b2b8ad51fefbe8be"
-  integrity sha512-NcdALwpXkTm5Zvvbk7owOUSvVvBKDgKP5/ewfXEznmQFfs4ZRmanOeKBTjRVjka3QFoN6XJ+9F3USqfHqTaU5w==
 
 is-buffer@~2.0.3:
   version "2.0.4"
@@ -3541,11 +3507,6 @@ node-preload@^0.2.1:
   dependencies:
     process-on-spawn "^1.0.0"
 
-node-uuid@^1.4.8:
-  version "1.4.8"
-  resolved "https://registry.yarnpkg.com/node-uuid/-/node-uuid-1.4.8.tgz#b040eb0923968afabf8d32fb1f17f1167fdab907"
-  integrity sha1-sEDrCSOWivq/jTL7HxfxFn/auQc=
-
 nodemon@^2.0.3:
   version "2.0.3"
   resolved "https://registry.yarnpkg.com/nodemon/-/nodemon-2.0.3.tgz#e9c64df8740ceaef1cb00e1f3da57c0a93ef3714"
@@ -4102,13 +4063,6 @@ please-upgrade-node@^3.2.0:
   dependencies:
     semver-compare "^1.0.0"
 
-precise-typeof@^1.0.2:
-  version "1.0.2"
-  resolved "https://registry.yarnpkg.com/precise-typeof/-/precise-typeof-1.0.2.tgz#db8ed470fd08470f5ef7c9b08ee70d6dd5232f0b"
-  integrity sha1-247UcP0IRw9e98mwjucNbdUjLws=
-  dependencies:
-    is-buffer "^1.1.1"
-
 prelude-ls@~1.1.2:
   version "1.1.2"
   resolved "https://registry.yarnpkg.com/prelude-ls/-/prelude-ls-1.1.2.tgz#21932a549f5e52ffd9a827f570e04be62a97da54"
@@ -4345,16 +4299,16 @@ readdirp@~3.3.0:
   dependencies:
     picomatch "^2.0.7"
 
-readmeio@^2.0.0:
-  version "2.0.0"
-  resolved "https://registry.yarnpkg.com/readmeio/-/readmeio-2.0.0.tgz#c4b0a9aa8b8ef8c0d7606070f9d6e695b1f98c70"
-  integrity sha512-4Q4d2H6ZjlOtwNuiqTdoR90fNo8Y44gRTaVMn3HFawe08wAy39px3jTVS2eezg0wy5pRQckKQcC+br2AyAbzFw==
+readmeio@^2.1.4:
+  version "2.1.4"
+  resolved "https://registry.yarnpkg.com/readmeio/-/readmeio-2.1.4.tgz#8a7fab0a567ca7e1eedec75114ae4d22249d9354"
+  integrity sha512-Mtzj4PToC676wgfbxHD9y37IIaDwcb34uXS3lICt/dFz7Gs6iNzcyraTmJH73TzKKNJ0U/H4hY3mxUiCrN+5JA==
   dependencies:
-    configly "^4.1.0"
+    content-type "^1.0.4"
     jsonwebtoken "^8.3.0"
     lodash "^4.17.15"
-    node-uuid "^1.4.8"
     r2 "^2.0.1"
+    uuid "^8.1.0"
 
 referrer-policy@1.2.0:
   version "1.2.0"
@@ -5210,11 +5164,6 @@ strip-json-comments@^3.0.1:
   resolved "https://registry.yarnpkg.com/strip-json-comments/-/strip-json-comments-3.1.0.tgz#7638d31422129ecf4457440009fba03f9f9ac180"
   integrity sha512-e6/d0eBu7gHtdCqFt0xJr642LdToM5/cN4Qb9DbHjVx1CP5RyeM+zH7pbecEmDv/lBqb0QH+6Uqq75rxFPkM0w==
 
-stripbom@^3.0.0:
-  version "3.0.0"
-  resolved "https://registry.yarnpkg.com/stripbom/-/stripbom-3.0.0.tgz#0159d615b4ebcdfa78aae57c87d4f81e96ed979b"
-  integrity sha1-AVnWFbTrzfp4quV8h9T4Hpbtl5s=
-
 superagent@^3.8.3:
   version "3.8.3"
   resolved "https://registry.yarnpkg.com/superagent/-/superagent-3.8.3.tgz#460ea0dbdb7d5b11bc4f78deba565f86a178e128"
@@ -5587,6 +5536,11 @@ uuid@^3.0.1, uuid@^3.3.2, uuid@^3.3.3:
   version "3.4.0"
   resolved "https://registry.yarnpkg.com/uuid/-/uuid-3.4.0.tgz#b23e4358afa8a202fe7a100af1f5f883f02007ee"
   integrity sha512-HjSDRw6gZE5JMggctHBcjVak08+KEVhSIiDzFnT9S9aegmp85S/bReBVTb4QTFaRNptJ9kuYaNhnbNEOkbKb/A==
+
+uuid@^8.1.0:
+  version "8.1.0"
+  resolved "https://registry.yarnpkg.com/uuid/-/uuid-8.1.0.tgz#6f1536eb43249f473abc6bd58ff983da1ca30d8d"
+  integrity sha512-CI18flHDznR0lq54xBycOVmphdCYnQLKn8abKn7PXUiKUGdEd+/l9LWNJmugXel4hXq7S+RMNl34ecyC9TntWg==
 
 v8-compile-cache@^2.0.3:
   version "2.1.0"
