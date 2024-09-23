@@ -15,8 +15,8 @@
     "lint": "eslint .",
     "lint:fix": "npm run lint -- --fix",
     "snyk:protect": "snyk protect",
-    "prepublish": "npm run snyk-protect && npm run snyk:protect",
-    "snyk-protect": "snyk protect"
+    "prepublish": "yarn run snyk-protect && npm run snyk:protect",
+    "snyk-protect": "snyk-protect"
   },
   "nyc": {
     "functions": 80,
@@ -72,23 +72,23 @@
     "mocha": "^7.1.1",
     "nodemon": "^2.0.3",
     "nyc": "^15.0.1",
-    "snyk": "^1.305.1",
     "supertest": "^4.0.2",
     "testdouble": "^3.13.1"
   },
   "dependencies": {
-    "bcrypt": "^4.0.1",
-    "body-parser": "^1.19.0",
+    "bcrypt": "^5.0.1",
+    "body-parser": "^1.20.3",
     "cors": "^2.8.5",
     "dotenv": "^8.2.0",
-    "express": "^4.17.1",
+    "express": "^4.21.0",
     "helmet": "^3.22.0",
     "http-status": "^1.4.2",
-    "jsonwebtoken": "^8.5.1",
+    "jsonwebtoken": "^9.0.2",
     "morgan": "^1.10.0",
-    "readmeio": "^2.0.0",
-    "sequelize": "^5.21.6",
-    "sqlite3": "^4.1.1"
+    "readmeio": "^3.1.1",
+    "sequelize": "^6.33.0",
+    "sqlite3": "^5.0.3",
+    "@snyk/protect": "latest"
   },
   "snyk": true
 }
